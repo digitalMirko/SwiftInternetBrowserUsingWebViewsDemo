@@ -31,16 +31,22 @@
                                 <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gBW-Jq-ciI">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bud-Zc-p30" firstAttribute="top" secondItem="Qns-tL-Ra7" secondAttribute="bottom" constant="6" id="4d6-o2-JKv"/>
                             <constraint firstItem="Qns-tL-Ra7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DP6-KC-dsx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bud-Zc-p30" secondAttribute="trailing" id="Dxr-F5-3Uj"/>
+                            <constraint firstItem="gBW-Jq-ciI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSx-mB-Z9k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qns-tL-Ra7" secondAttribute="trailing" id="XVG-NW-y7M"/>
                             <constraint firstItem="bud-Zc-p30" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y9j-RO-dnl"/>
                             <constraint firstItem="Qns-tL-Ra7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oXl-9A-JCy"/>
                             <constraint firstItem="bud-Zc-p30" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pn2-bb-Hte"/>
+                            <constraint firstItem="gBW-Jq-ciI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w09-ug-LRl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
