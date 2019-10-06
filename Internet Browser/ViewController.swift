@@ -9,12 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var webBrowserView: WKWebView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func backBtn(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func forwardBtn(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func refreshBtn(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func stopBtn(_ sender: Any) {
+        
+        
+    }
+    
+    
 
 }
 

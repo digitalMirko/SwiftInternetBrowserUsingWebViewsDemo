@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bud-Zc-p30">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -34,7 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bud-Zc-p30" firstAttribute="top" secondItem="Qns-tL-Ra7" secondAttribute="bottom" id="4d6-o2-JKv"/>
+                            <constraint firstItem="bud-Zc-p30" firstAttribute="top" secondItem="Qns-tL-Ra7" secondAttribute="bottom" constant="6" id="4d6-o2-JKv"/>
                             <constraint firstItem="Qns-tL-Ra7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DP6-KC-dsx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bud-Zc-p30" secondAttribute="trailing" id="Dxr-F5-3Uj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qns-tL-Ra7" secondAttribute="trailing" id="XVG-NW-y7M"/>
@@ -45,15 +45,34 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="rewind" id="Zm6-62-x5n"/>
-                        <barButtonItem systemItem="fastForward" id="Wul-RE-Kqx"/>
+                        <barButtonItem systemItem="rewind" id="Zm6-62-x5n">
+                            <connections>
+                                <action selector="backBtn:" destination="BYZ-38-t0r" id="vNQ-Hn-hHF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="fastForward" id="Wul-RE-Kqx">
+                            <connections>
+                                <action selector="forwardBtn:" destination="BYZ-38-t0r" id="dP0-gi-Wk5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="1Xs-U1-CNc"/>
-                        <barButtonItem systemItem="refresh" id="f3L-Xu-f4i"/>
-                        <barButtonItem systemItem="stop" id="Qwk-ac-es6"/>
+                        <barButtonItem systemItem="refresh" id="f3L-Xu-f4i">
+                            <connections>
+                                <action selector="refreshBtn:" destination="BYZ-38-t0r" id="Qk0-OA-zGr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="stop" id="Qwk-ac-es6">
+                            <connections>
+                                <action selector="stopBtn:" destination="BYZ-38-t0r" id="8xn-Jx-52T"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="u7P-0a-r9e"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webBrowserView" destination="bud-Zc-p30" id="CHs-te-c8u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
