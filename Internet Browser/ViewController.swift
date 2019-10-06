@@ -18,7 +18,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // default url loaded on app start
+        let url = URL(string: "http://www.google.com")
+        let request = URLRequest(url: url!)
+        
+        webBrowserView.load(request)
+        
     }
 
     
