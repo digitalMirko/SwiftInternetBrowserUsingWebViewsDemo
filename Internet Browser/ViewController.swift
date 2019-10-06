@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var webBrowserView: WKWebView!
     
+    @IBOutlet weak var actionIndicator: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {

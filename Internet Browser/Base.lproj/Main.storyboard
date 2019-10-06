@@ -24,7 +24,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Qns-tL-Ra7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="gVf-AH-dw4"/>
                                 </constraints>
@@ -77,6 +77,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="actionIndicator" destination="gBW-Jq-ciI" id="uzz-Ky-gXV"/>
                         <outlet property="webBrowserView" destination="bud-Zc-p30" id="CHs-te-c8u"/>
                     </connections>
                 </viewController>
