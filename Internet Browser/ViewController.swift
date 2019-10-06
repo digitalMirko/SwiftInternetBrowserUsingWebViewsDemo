@@ -16,7 +16,6 @@ class ViewController: UIViewController, WKNavigationDelegate, UISearchBarDelegat
     
     @IBOutlet weak var actionIndicator: UIActivityIndicatorView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
