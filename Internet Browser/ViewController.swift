@@ -30,22 +30,27 @@ class ViewController: UIViewController {
     
     @IBAction func backBtn(_ sender: Any) {
         
-        
+        if webBrowserView.canGoBack {
+            webBrowserView.goBack()
+        }
     }
     
     @IBAction func forwardBtn(_ sender: Any) {
         
-        
+        if webBrowserView.canGoForward {
+            webBrowserView.goForward()
+        }
     }
     
     @IBAction func refreshBtn(_ sender: Any) {
         
+        webBrowserView.reload()
         
     }
     
     @IBAction func stopBtn(_ sender: Any) {
         
-        
+        webBrowserView.stopLoading()
     }
     
     
