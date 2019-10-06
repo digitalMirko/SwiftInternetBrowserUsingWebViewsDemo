@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
     
     
     @IBOutlet weak var webBrowserView: WKWebView!
@@ -23,11 +23,15 @@ class ViewController: UIViewController {
         // default url loaded on app start
         let url = URL(string: "http://www.google.com")
         let request = URLRequest(url: url!)
-        
+
         webBrowserView.load(request)
         
+        webBrowserView.addSubview(actionIndicator)
+        actionIndicator.startAnimating()
+        
+        webBrowserView.navigationDelegate = self
+        actionIndicator.hidesWhenStopped = true
     }
-
     
     @IBAction func backBtn(_ sender: Any) {
         
@@ -46,7 +50,6 @@ class ViewController: UIViewController {
     @IBAction func refreshBtn(_ sender: Any) {
         
         webBrowserView.reload()
-        
     }
     
     @IBAction func stopBtn(_ sender: Any) {
@@ -54,7 +57,21 @@ class ViewController: UIViewController {
         webBrowserView.stopLoading()
     }
     
+    // functions for use with UIActivity Indicator View
     
-
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        
+        actionIndicator.startAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        
+        actionIndicator.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        
+        actionIndicator.stopAnimating()
+    }
 }
 
