@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class ViewController: UIViewController, WKNavigationDelegate, UISearchBarDelegate {
     
     
     @IBOutlet weak var webBrowserView: WKWebView!
@@ -23,7 +23,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         // default url loaded on app start
         let url = URL(string: "http://www.google.com")
         let request = URLRequest(url: url!)
-
         webBrowserView.load(request)
         
         webBrowserView.addSubview(actionIndicator)
@@ -72,6 +71,18 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         
         actionIndicator.stopAnimating()
+    }
+    
+    // functions for use with UISearchBar
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        
+        let url = URL(string: "http://\(searchBar.text!)")
+        let request = URLRequest(url: url!)
+        webBrowserView.load(request)
+        
     }
 }
 
